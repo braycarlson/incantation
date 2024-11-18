@@ -45,10 +45,11 @@ class DotfilesInstaller(BaseInstaller):
         log.info('Preparing directories for symbolic links...')
 
         symlinks = {
-            LOCALAPPDATA / 'nvim': self.dotfiles_dir / 'nvim',
-            ROAMING_APPDATA / 'alacritty': self.dotfiles_dir / 'alacritty',
-            PERSONAL / 'backup/registry': self.dotfiles_dir / 'registry',
-            PERSONAL / 'backup/aliases.bat': self.dotfiles_dir / 'aliases.bat',
+            LOCALAPPDATA / 'nvim': DOTFILES / 'nvim',
+            ROAMING_APPDATA / 'alacritty': DOTFILES / 'alacritty',
+            ROAMING_APPDATA / 'Sublime Text/Packages/User': DOTFILES / 'sublime_text',
+            PERSONAL / 'backup/registry': DOTFILES / 'registry',
+            PERSONAL / 'backup/aliases.bat': DOTFILES / 'aliases.bat',
         }
 
         for symlink in symlinks:
