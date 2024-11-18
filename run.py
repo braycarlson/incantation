@@ -18,11 +18,11 @@ def main() -> None:
     )
 
     installers = [
-        AlacrittyInstaller(),
-        DotfilesInstaller(),
-        FontInstaller(),
-        FirefoxInstaller(),
         GitInstaller(),
+        AlacrittyInstaller(),
+        FirefoxInstaller(),
+        FontInstaller(),
+        DotfilesInstaller()
     ]
 
     for installer in installers:
