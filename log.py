@@ -16,7 +16,7 @@ def logger() -> Generator[None, Any, None]:
         log = logging.getLogger()
         log.setLevel(logging.DEBUG)
 
-        path = LOG / 'installer.log'
+        path = LOG / 'incantation.log'
         path.touch(exist_ok=True)
 
         file_handler = logging.FileHandler(
