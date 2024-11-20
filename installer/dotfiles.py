@@ -4,7 +4,7 @@ import logging
 
 from constant import (
     DOTFILES,
-    LOCALAPPDATA,
+    LOCAL_APPDATA,
     PERSONAL,
     ROAMING_APPDATA
 )
@@ -39,13 +39,13 @@ class DotfilesInstaller(BaseInstaller):
 
             self.run(command)
         else:
-            log.info("Dotfiles repository already exists.")
+            log.info('dotfiles repository already exists.')
 
     def install(self) -> None:
         log.info('Preparing directories for symbolic links...')
 
         symlinks = {
-            LOCALAPPDATA / 'nvim': DOTFILES / 'nvim',
+            LOCAL_APPDATA / 'nvim': DOTFILES / 'nvim',
             ROAMING_APPDATA / 'alacritty': DOTFILES / 'alacritty',
             ROAMING_APPDATA / 'Sublime Text/Packages/User': DOTFILES / 'sublime_text',
             PERSONAL / 'backup/registry': DOTFILES / 'registry',

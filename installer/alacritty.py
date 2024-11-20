@@ -44,7 +44,7 @@ class AlacrittyInstaller(BaseInstaller):
             download = next(
                 asset['browser_download_url']
                 for asset in file['assets']
-                if asset['name'].endswith(".msi")
+                if asset['name'].endswith('.msi')
             )
 
         log.info(f"Latest installer URL: {download}")

@@ -7,7 +7,6 @@ from installer.alacritty import AlacrittyInstaller
 from installer.dotfiles import DotfilesInstaller
 from installer.font import FontInstaller
 from installer.firefox import FirefoxInstaller
-from installer.git import GitInstaller
 from log import logger
 
 
@@ -18,11 +17,10 @@ def main() -> None:
     )
 
     installers = [
-        GitInstaller(),
-        AlacrittyInstaller(),
-        FirefoxInstaller(),
+        # AlacrittyInstaller(),
+        # FirefoxInstaller(),
         FontInstaller(),
-        DotfilesInstaller()
+        # DotfilesInstaller()
     ]
 
     for installer in installers:

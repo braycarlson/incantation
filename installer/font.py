@@ -13,7 +13,7 @@ class FontInstaller(BaseInstaller):
     def __init__(self) -> None:
         super().__init__()
 
-        self.url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip"
+        self.url = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip'
         self.zip = DOWNLOAD / 'FiraCode.zip'
         self.extraction = DOWNLOAD / 'FiraCode'
 
@@ -39,7 +39,7 @@ class FontInstaller(BaseInstaller):
     def install(self) -> None:
         self.preinstall()
 
-        log.info("Extracting and installing FiraCode Nerd Font...")
+        log.info('Extracting and installing FiraCode Nerd Font...')
 
         self.extraction.mkdir(parents=True, exist_ok=True)
 
@@ -65,7 +65,7 @@ class FontInstaller(BaseInstaller):
         self.postinstall()
 
     def postinstall(self) -> None:
-        for file in self.extraction.glob("*"):
+        for file in self.extraction.glob('*'):
             file.unlink()
 
         self.extraction.rmdir()
